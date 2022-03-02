@@ -67,9 +67,6 @@
             return $" Price: {this.Price} Size: {this.Size} Colour: {this._colour} Shape: {this._shape}  Type: {this._type}\n";
         }
 
-
-        public Pearl() { }
-
         internal static class Factory
         {
             internal static IPearl CreateWithRandomData()

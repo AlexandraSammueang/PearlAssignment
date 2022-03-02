@@ -9,7 +9,7 @@ namespace PearlAssignment
     
     class Necklace : INecklace
     {
-        List<Pearl> _pearlLists = new List<Pearl>();
+        List<IPearl> _pearlLists = new List<IPearl>();
         public int Count()
         {
             return _pearlLists.Count;
@@ -20,12 +20,12 @@ namespace PearlAssignment
             _pearlLists.Sort();
         }
 
-        public Necklace(int NrOfPearls)
+        public void RandomInit(int NrOfPearls)
         {
-            //var rnd = new Random();
+            var rnd = new Random();
             for (int i = 0; i < NrOfPearls; i++)
             {
-                _pearlLists.Add(new Pearl()); 
+                _pearlLists.Add(Pearl.Factory.CreateWithRandomData()); 
             }
         }
         public override string ToString()
@@ -40,15 +40,15 @@ namespace PearlAssignment
             return sRet;
         }
 
-        //internal static class Factory
-        //{
-        //    internal static INecklace CreateWithRandomData()
-        //    {
-        //        var _necklace = new Pearl();
-        //        pearl.RandomInit();
-        //        pearl.GetPrice();
-        //        return _necklace;
-        //    }
-        //}
+        Necklace() { }
+        internal static class Factory
+        {
+            internal static INecklace CreateWithRandomData(int NrOfPearls)
+            {
+                var _necklace = new Necklace();
+                _necklace.RandomInit(NrOfPearls);
+                return (INecklace)_necklace;
+            }
+        }
     }
 }
