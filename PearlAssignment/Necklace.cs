@@ -47,7 +47,7 @@ namespace PearlAssignment
             {
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
-                return (INecklace)_necklace;
+                return _necklace;
             }
         }
     }
