@@ -38,10 +38,19 @@
             }
         }
 
+        public override string ToString()
+        {
+            return $" Price: {this.Price} Size: {this.Size} Clor: {this._colour} Shape: {this._shape}  Type: {this._type}\n";
+        }
         public void GetPrice()
         {
 
         }
+
+        public Pearl() {
+            RandomInit();
+                }
+
 
     }
 }
