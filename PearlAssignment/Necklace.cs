@@ -40,7 +40,6 @@ namespace PearlAssignment
             return sRet;
         }
 
-        Necklace() { }
         internal static class Factory
         {
             internal static INecklace CreateWithRandomData(int NrOfPearls)
