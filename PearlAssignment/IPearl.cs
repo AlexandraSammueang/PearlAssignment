@@ -11,7 +11,7 @@ namespace PearlAssignment
     public enum Shape { Round, Drop }
 
     public enum Type { FreshWater, SaltWater}
-    interface IPearl
+    interface IPearl : IEquatable<IPearl>, IComparable<IPearl>
     {
         public int Size { get; set; }
         public int Price { get; set; }
@@ -20,5 +20,10 @@ namespace PearlAssignment
         public Shape _shape { get; set; }
 
         public Type _type { get; set; }
+
+        public void RandomInit();
+        
+
+        
     }
 }

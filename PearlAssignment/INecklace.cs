@@ -9,6 +9,8 @@ namespace PearlAssignment
     
     interface INecklace
     {
+        public int Count();// counts the pearls in a necklace
+        public void Sort();// Pearl by size, colour and shape
 
     }
 }
