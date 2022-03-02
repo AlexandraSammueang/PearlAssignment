@@ -15,18 +15,10 @@ namespace PearlAssignment
             return _pearlLists.Count;
         }
 
-        public int Count(Type type)
+        public void Count(Type type)
         {
-            int count = 0;
-            foreach (Pearl type in _pearlLists)
-            {
-                if (type. == year)
-                {
-                    count++;
-                }
+           
 
-            }
-            return count;
         }
         public void Sort()
         {
