@@ -23,14 +23,7 @@ namespace PearlAssignment
         public void Sort()
         {
             _pearlLists.Sort();
-        }
-
-        public void SortBy()
-        {
-            _pearlLists.OrderBy(o => o.Size).ThenBy(o => o._colour).ThenBy(o=>o._shape);
-
-        }
-         
+        }        
         
 
         public void RandomInit(int NrOfPearls)
@@ -80,7 +73,7 @@ namespace PearlAssignment
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
                 _necklace.CountFandS();
-                _necklace.SortBy();
+                _necklace.Sort();
                 return _necklace;
             }
         }
