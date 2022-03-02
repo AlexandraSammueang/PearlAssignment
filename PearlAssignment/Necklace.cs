@@ -14,10 +14,6 @@ namespace PearlAssignment
         {
             return _pearlLists.Count;
         }
-      
-      
-
-   
 
         public void Count(Type type)
         {
