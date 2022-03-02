@@ -14,6 +14,10 @@ namespace PearlAssignment
         {
             return _pearlLists.Count;
         }
+      
+      
+
+   
 
         public void Sort()
         {
@@ -28,6 +32,8 @@ namespace PearlAssignment
                 _pearlLists.Add(Pearl.Factory.CreateWithRandomData()); 
             }
         }
+
+
         public override string ToString()
         {
             string sRet = "";
@@ -39,6 +45,24 @@ namespace PearlAssignment
             }
             return sRet;
         }
+        public void CountFandS()
+        {
+            int cF = 0;
+            int cS = 0;
+            for (int i = 0; i < _pearlLists.Count; i++)
+            {
+                if (_pearlLists[i]._type == Type.FreshWater)
+                {
+                    cF++;
+                }
+                else if (_pearlLists[i]._type == Type.SaltWater)
+                {
+                    cS++;
+                }
+
+            }
+            Console.WriteLine($"Freshwater: {cF} Saltwater: {cS}");
+        }
 
         internal static class Factory
         {
@@ -46,6 +70,8 @@ namespace PearlAssignment
             {
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
+                _necklace.CountFreshwater();
+
                 return _necklace;
             }
         }
