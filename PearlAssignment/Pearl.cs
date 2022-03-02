@@ -21,30 +21,26 @@
         public void RandomInit()
         {
        
-
-        var rnd = new Random();
-        bool bAllOK = false;
+         var rnd = new Random();
+            bool bAllOK = false;
             while (!bAllOK)
             {
                 try
                 {
-                    int size = rnd.Next(5,26);
-                   
-
-
-
-                  
-                    //            this.Type = (Type) rnd.Next((int) Type.Sweetwater, (int) Type.Saltwather + 1);
-
-                    //string[] _firstnames = "Fred John Mary Jane Oliver Marie".Split(' ');
-                    //string[] _lastnames = "Johnsson Pearsson Smith Ewans Andersson".Split(' ');
-                    //            this.FirstName = _firstnames[rnd.Next(0, _firstnames.Length)];
-                    //            this.LastName = _lastnames[rnd.Next(0, _lastnames.Length)];
-
+                    this.Size = rnd.Next(5,26);
+                    this._colour = (Colour)rnd.Next((int)Colour.Black, (int)Colour.Pink + 1);
+                    this._shape = (Shape)rnd.Next((int)Shape.Round, (int)Shape.Drop + 1);
+                    this._type = (Type)rnd.Next((int)Type.FreshWater, (int)Type.SaltWater + 1);
+                    
                     bAllOK = true;
                 }
                 catch { }
             }
+        }
+
+        public void GetPrice()
+        {
+
         }
 
     }
