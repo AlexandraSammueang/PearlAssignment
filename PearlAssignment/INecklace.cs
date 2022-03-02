@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PearlAssignment
 {
-    internal class PearlList
+    internal interface INecklace
     {
     }
 }
