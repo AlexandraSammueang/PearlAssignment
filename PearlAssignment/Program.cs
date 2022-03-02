@@ -7,3 +7,4 @@ Console.WriteLine(pearl);
 
 INecklace necklace = Necklace.Factory.CreateWithRandomData(35);
 Console.WriteLine($"Our necklace contains 35 different pearls: \n{necklace}");
+
