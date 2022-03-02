@@ -66,16 +66,12 @@
         {
             return $" Price: {this.Price} Size: {this.Size} Clor: {this._colour} Shape: {this._shape}  Type: {this._type}\n";
         }
-      
 
-        public Pearl() 
+
+        public Pearl()
         {
 
-            RandomInit();
-            GetPrice();
-
-
-        public Pearl() { }
+        }
            
         internal static class Factory
         {
@@ -83,6 +79,7 @@
             {
                 var pearl = new Pearl();
                 pearl.RandomInit();
+                pearl.GetPrice();
                 return pearl;
             }
         }
