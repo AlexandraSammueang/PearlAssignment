@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PearlAssignment
 {
-    internal class Necklace
+    class Necklace
     {
     }
 }

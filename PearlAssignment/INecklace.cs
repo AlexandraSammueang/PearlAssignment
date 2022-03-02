@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PearlAssignment
 {
-    internal interface INecklace
+    interface INecklace
     {
+
     }
 }
