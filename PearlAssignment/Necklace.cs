@@ -20,19 +20,14 @@ namespace PearlAssignment
             _pearlLists.Sort();
         }
 
-        //public int Count(int year)
-        //{
-        //    int count = 0;
-        //    foreach (Pearl pearl1 in _necklaceList)
-        //    {
-        //        if (pearl. == year)
-        //        {
-        //            count++;
-        //        }
-
-        //    }
-        //    return count;
-        //}
+        public Necklace(int NrOfPearls)
+        {
+            //var rnd = new Random();
+            for (int i = 0; i < NrOfPearls; i++)
+            {
+                _pearlLists.Add(new Pearl()); 
+            }
+        }
         public override string ToString()
         {
             string sRet = "";
@@ -44,5 +39,16 @@ namespace PearlAssignment
             }
             return sRet;
         }
+
+        //internal static class Factory
+        //{
+        //    internal static INecklace CreateWithRandomData()
+        //    {
+        //        var _necklace = new Pearl();
+        //        pearl.RandomInit();
+        //        pearl.GetPrice();
+        //        return _necklace;
+        //    }
+        //}
     }
 }

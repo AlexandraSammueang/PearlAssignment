@@ -4,3 +4,6 @@ using PearlAssignment;
 var pearl = Pearl.Factory.CreateWithRandomData();
 
 Console.WriteLine(pearl);
+
+INecklace necklace = new Necklace(35);
+Console.WriteLine($"We have: {necklace} pearls");
