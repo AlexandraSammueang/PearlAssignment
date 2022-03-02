@@ -10,6 +10,7 @@ namespace PearlAssignment
     class Necklace : INecklace
     {
         List<IPearl> _pearlLists = new List<IPearl>();
+        #region(Count)
         public int Count()
         {
             return _pearlLists.Count;
@@ -20,12 +21,13 @@ namespace PearlAssignment
            
 
         }
+
+        #endregion
         public void Sort()
         {
             _pearlLists.Sort();
         }        
         
-
         public void RandomInit(int NrOfPearls)
         {
             var rnd = new Random();
@@ -34,7 +36,6 @@ namespace PearlAssignment
                 _pearlLists.Add(Pearl.Factory.CreateWithRandomData()); 
             }
         }
-
 
         public override string ToString()
         {
@@ -66,6 +67,7 @@ namespace PearlAssignment
             Console.WriteLine($"Freshwater: {cF} Saltwater: {cS}");
         }
 
+        #region(Factory)
         internal static class Factory
         {
             internal static INecklace CreateWithRandomData(int NrOfPearls)
@@ -77,5 +79,6 @@ namespace PearlAssignment
                 return _necklace;
             }
         }
+        #endregion
     }
 }
