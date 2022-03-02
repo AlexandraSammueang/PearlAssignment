@@ -68,10 +68,7 @@
         }
 
 
-        public Pearl()
-        {
-
-        }
+        public Pearl() { }
            
         internal static class Factory
         {
@@ -79,7 +76,7 @@
             {
                 var pearl = new Pearl();
                 pearl.RandomInit();
-                pearl.GetPrice();
+                pearl.GetPrice();   
                 return pearl;
             }
         }
