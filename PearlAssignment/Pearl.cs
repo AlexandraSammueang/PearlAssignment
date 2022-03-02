@@ -59,9 +59,9 @@
 
         }
 
-        public Pearl() {
-            RandomInit();
-                }
+        public Pearl() { }
+           
+                
 
         internal static class Factory
         {
