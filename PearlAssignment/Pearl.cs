@@ -8,12 +8,12 @@
         public Shape _shape { get; set; }
         public Type _type { get; set; }
 
-        public int CompareTo(IPearl? other)
+        public int CompareTo(IPearl other)
         {
             throw new NotImplementedException();
         }
 
-        public bool Equals(IPearl? other)
+        public bool Equals(IPearl other)
         {
             throw new NotImplementedException();
         }
@@ -29,9 +29,8 @@
                 try
                 {
                     int size = rnd.Next(5,26);
-                    //color
-                    //Form
-                    //Type enum
+                   
+
 
 
                   
