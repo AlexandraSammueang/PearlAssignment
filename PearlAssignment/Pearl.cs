@@ -1,8 +1,22 @@
 ﻿namespace PearlAssignment
 {
-    class Pearl
+    class Pearl :IPearl
     {
-       
+        public int Size { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Colour _colour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Shape _shape { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Type _type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int CompareTo(IPearl? other)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Equals(IPearl? other)
+        {
+            throw new NotImplementedException();
+        }
 
         public void RandomInit()
         {

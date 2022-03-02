@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace PearlAssignment
 {
-     class Necklace
+    class Necklace : INecklace
     {
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Sort()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
