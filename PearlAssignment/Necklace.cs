@@ -75,7 +75,7 @@ namespace PearlAssignment
             {
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
-                _necklace.CountFreshwater();
+                _necklace.CountFandS();
 
                 return _necklace;
             }
