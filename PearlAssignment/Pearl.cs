@@ -10,13 +10,25 @@
 
         public int CompareTo(IPearl other)
         {
-            throw new NotImplementedException();
+            if (this.Size != other.Size)
+            {
+                return this.Size.CompareTo(other.Size);
+            }
+            if (this._colour != other._colour)
+            {
+                return this._colour.CompareTo(other._colour);
+            }
+            if (this._shape != other._shape)
+            {
+                return this._shape.CompareTo(other._shape);
+            }
+            return this._type.CompareTo(other._type);
         }
 
-        public bool Equals(IPearl other)
-        {
-            throw new NotImplementedException();
-        }
+        public bool Equals(IPearl pearl) => (this.Size, this._colour, this._shape, this._type) == (pearl.Size, pearl._colour, pearl._shape, pearl._type);
+        public override bool Equals(object obj) => Equals(obj as IPearl);
+        public override int GetHashCode() => (Size, _colour, _shape, _type).GetHashCode();
+    
 
         public void RandomInit()
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PearlAssignment
 {
+    
     class Necklace : INecklace
     {
         public int Count()
