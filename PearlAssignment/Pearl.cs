@@ -66,13 +66,6 @@
         {
             return $" Price: {this.Price} Size: {this.Size} Clor: {this._colour} Shape: {this._shape}  Type: {this._type}\n";
         }
-      
-
-        public Pearl() 
-        {
-
-            RandomInit();
-            GetPrice();
 
 
         public Pearl() { }
@@ -83,6 +76,7 @@
             {
                 var pearl = new Pearl();
                 pearl.RandomInit();
+                pearl.GetPrice();   
                 return pearl;
             }
         }
