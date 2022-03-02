@@ -50,18 +50,32 @@
             }
         }
 
+        public void GetPrice()
+        {
+            if (_type == Type.FreshWater)
+            {
+                this.Price = Size * 50;
+            }
+            if (_type == Type.SaltWater)
+            {
+                this.Price = Size * 100;
+            }
+
+        }
         public override string ToString()
         {
             return $" Price: {this.Price} Size: {this.Size} Clor: {this._colour} Shape: {this._shape}  Type: {this._type}\n";
         }
-        public void GetPrice()
+      
+
+        public Pearl() 
         {
 
-        }
-
-        public Pearl() {
             RandomInit();
-                }
+            GetPrice();
+
+
+        }
 
 
     }
