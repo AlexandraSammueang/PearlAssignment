@@ -2,11 +2,11 @@
 {
     class Pearl :IPearl
     {
-        public int Size { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Colour _colour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Shape _shape { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Type _type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Size { get; set; }
+        public int Price { get; set; }
+        public Colour _colour { get; set; }
+        public Shape _shape { get; set; }
+        public Type _type { get; set; }
 
         public int CompareTo(IPearl? other)
         {
