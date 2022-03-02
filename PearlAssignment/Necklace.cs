@@ -9,15 +9,15 @@ namespace PearlAssignment
     
     class Necklace : INecklace
     {
-        List<INecklace> _necklaceList = new List<INecklace>();
+        List<Pearl> _pearlLists = new List<Pearl>();
         public int Count()
         {
-            return _necklaceList.Count;
+            return _pearlLists.Count;
         }
 
         public void Sort()
         {
-            _necklaceList.Sort();
+            _pearlLists.Sort();
         }
 
         //public int Count(int year)
@@ -36,9 +36,9 @@ namespace PearlAssignment
         public override string ToString()
         {
             string sRet = "";
-            for (int i = 0; i < _necklaceList.Count; i++)
+            for (int i = 0; i < _pearlLists.Count; i++)
             {
-                sRet += $"{_necklaceList[i],-10}";
+                sRet += $"{_pearlLists[i],-10}";
                 if ((i + 1) % 10 == 0)
                     sRet += "\n";
             }
