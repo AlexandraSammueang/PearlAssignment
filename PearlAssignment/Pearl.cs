@@ -63,6 +63,16 @@
             RandomInit();
                 }
 
+        internal static class Factory
+        {
+            internal static IPearl CreateWithRandomData()
+            {
+                var pearl = new Pearl();
+                pearl.RandomInit();
+                return pearl;
+            }
+        }
+
 
     }
 }
