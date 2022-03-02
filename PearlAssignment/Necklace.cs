@@ -19,6 +19,11 @@ namespace PearlAssignment
 
    
 
+        public void Count(Type type)
+        {
+           
+
+        }
         public void Sort()
         {
             _pearlLists.Sort();
