@@ -25,8 +25,6 @@
             return this._type.CompareTo(other._type);
         }
 
-        
-        
         public bool Equals(IPearl pearl) => (this.Size, this._colour, this._shape, this._type) == (pearl.Size, pearl._colour, pearl._shape, pearl._type);
         public override bool Equals(object obj) => Equals(obj as IPearl);
         public override int GetHashCode() => (Size, _colour, _shape, _type).GetHashCode();
