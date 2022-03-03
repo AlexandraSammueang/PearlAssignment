@@ -74,7 +74,7 @@
         #region(Factory)
         internal static class Factory
         {
-            internal static IPearl CreateWithRandomData()
+            internal static Pearl CreateWithRandomData()
             {
                 var pearl = new Pearl();
                 pearl.RandomInit();

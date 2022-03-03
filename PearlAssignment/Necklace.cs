@@ -9,7 +9,7 @@ namespace PearlAssignment
     
     class Necklace : INecklace
     {
-        List<IPearl> _pearlLists = new List<IPearl>();
+         List<IPearl> _pearlLists = new List<IPearl>();
         #region(Count)
         public int Count()
         {
@@ -67,10 +67,12 @@ namespace PearlAssignment
             Console.WriteLine($"Freshwater: {cF} Saltwater: {cS}");
         }
 
+        //public int IndexOf(IPearl pearl) => _pearlLists.IndexOf(pearl);
+        //public IPearl this[int idx] { get { return _pearlLists[idx]; } }
         #region(Factory)
         internal static class Factory
         {
-            internal static INecklace CreateWithRandomData(int NrOfPearls)
+            internal static Necklace CreateWithRandomData(int NrOfPearls)
             {
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
