@@ -10,17 +10,15 @@ namespace PearlAssignment
     class Necklace : INecklace
     {
         List<IPearl> _pearlLists = new List<IPearl>();
+        public IPearl this[int idx] => _pearlLists[idx];
         #region(Count)
+        
         public int Count()
         {
             return _pearlLists.Count;
         }
 
-        public void Count(Type type)
-        {
-           
-
-        }
+      
 
         #endregion
         public void Sort()
@@ -48,36 +46,56 @@ namespace PearlAssignment
             }
             return sRet;
         }
-        public void CountFandS()
+        public int Count(Type type)
         {
-            int cF = 0;
-            int cS = 0;
-            for (int i = 0; i < _pearlLists.Count; i++)
-            {
-                if (_pearlLists[i]._type == Type.FreshWater)
-                {
-                    cF++;
-                }
-                else if (_pearlLists[i]._type == Type.SaltWater)
-                {
-                    cS++;
-                }
+            //int count = 0;
 
+            //for (int i = 0; i < _pearlLists.Count; i++)
+            //{
+            //    if (type == _pearlLists[i]._type)
+            //    {
+            //        count++;
+            //    }
+
+
+            //}
+
+            //return count;
+
+            int c = 0;
+            foreach (var item in _pearlLists )
+            {
+                if (type == item._type)
+                   c++;
             }
-            Console.WriteLine($"Freshwater: {cF} Saltwater: {cS}");
+            return c;
+        }
+        public int IndexOf(IPearl pearl) => _pearlLists.IndexOf(pearl);
+
+        public decimal GetPrice()
+        {
+            decimal TotalPrice = 0M;
+
+            for (int p = 0; p < _pearlLists.Count; p++)
+            {
+                TotalPrice += _pearlLists[p].Price;
+            }
+
+            return TotalPrice;
         }
 
         #region(Factory)
         internal static class Factory
         {
-            internal static INecklace CreateWithRandomData(int NrOfPearls)
+            internal static Necklace CreateWithRandomData(int NrOfPearls)
             {
                 var _necklace = new Necklace();
                 _necklace.RandomInit(NrOfPearls);
-                _necklace.CountFandS();
-                _necklace.Sort();
+                
                 return _necklace;
             }
+
+          
         }
         #endregion
     }

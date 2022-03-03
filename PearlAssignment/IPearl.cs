@@ -11,7 +11,7 @@ namespace PearlAssignment
     public enum Shape { Round, Drop }
 
     public enum Type { FreshWater, SaltWater }
-    interface IPearl : IEquatable<IPearl>, IComparable<IPearl>
+    public interface IPearl : IEquatable<IPearl>, IComparable<IPearl>
     {
         public int Size { get; set; }
         public int Price { get; set; }

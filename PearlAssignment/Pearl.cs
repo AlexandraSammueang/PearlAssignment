@@ -19,14 +19,11 @@
             {
                 return this._colour.CompareTo(other._colour);
             }
-            if (this._shape != other._shape)
-            {
-                return this._shape.CompareTo(other._shape);
-            }
-            return this._type.CompareTo(other._type);
+           
+            return this._shape.CompareTo(other._shape);
         }
        
-        public bool Equals(IPearl pearl) => (this.Size, this._colour, this._shape, this._type) == (pearl.Size, pearl._colour, pearl._shape, pearl._type);
+        public bool Equals(IPearl pearl) => (this.Size, this._colour, this._shape) == (pearl.Size, pearl._colour, pearl._shape);
         public override bool Equals(object obj) => Equals(obj as IPearl);
         public override int GetHashCode() => (Size, _colour, _shape, _type).GetHashCode();
         #endregion
@@ -51,17 +48,22 @@
                 catch { }
             }
         }
-
+        
         public void GetPrice()
         {
             if (_type == Type.FreshWater)
             {
                 this.Price = Size * 50;
+                
             }
             if (_type == Type.SaltWater)
             {
                 this.Price = Size * 100;
+                
             }
+         
+            
+            
 
         }
 
@@ -74,7 +76,7 @@
         #region(Factory)
         internal static class Factory
         {
-            internal static IPearl CreateWithRandomData()
+            internal static Pearl CreateWithRandomData()
             {
                 var pearl = new Pearl();
                 pearl.RandomInit();
