@@ -84,6 +84,8 @@ namespace PearlAssignment
             return TotalPrice;
         }
 
+        //public int IndexOf(IPearl pearl) => _pearlLists.IndexOf(pearl);
+        //public IPearl this[int idx] { get { return _pearlLists[idx]; } }
         #region(Factory)
         internal static class Factory
         {
